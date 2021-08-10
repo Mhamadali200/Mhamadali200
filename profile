@@ -1,1 +1,1 @@
-worker: node Doctor.js
+worker: node doctor.js
