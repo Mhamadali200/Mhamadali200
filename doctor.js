@@ -1,12 +1,27 @@
-const Discord = require('discord.js');
+/**@format */
+//code By Doctor 
+console.clear();
 
-const client = new Discord.Client();
+const discord = require("discord.js");
 
-client.once("ready", () =>{
-    console.log('bot is ready')
+ const config = require("./data/config.json");
+
+const intents = new discord.Intents(32767);
+//code By Doctor 
+const client = new discord.Client({ intents });
+
+client.on("ready", () => console.log("Bot is onlline!!"));
+
+client.on("messageCreate", Message => {
+//console.log(Message.content);
+
+if (Message.content.startsWith(config.prefix)) return;
+
+const args = Message.content.substring(config.prefix.length).split(/ +/);
+
 });
 
+client.login(config.token);
 
 
-
-client.login("ODc0NjIzNzQ3MTcxMTcyMzcy.YRJq1w.Ylril4nGTjqHEL1BqMTUa1SRctI");
+//code By Doctor 
