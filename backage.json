@@ -1,0 +1,12 @@
+{
+  "name": "doctor-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "author": "doctor",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.2.0-dev.1633219528.b76bb8a"
+  }
+}
+
